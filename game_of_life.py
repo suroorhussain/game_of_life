@@ -10,3 +10,6 @@ def isdead(x, y, grid) :
 
 def set_alive(x, y, grid) :
     grid[x][y] = 1
+
+def set_dead(x, y, grid) :
+    grid[x][y] = 0

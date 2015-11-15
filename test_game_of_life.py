@@ -16,4 +16,8 @@ def test_isdead_false() :
 
 def test_set_alive() :
     game_of_life.set_alive(0, 0, test_data)
-    assert test_data[0, 0] == 1
+    assert test_data[0][0] == 1
+
+def test_set_dead() :
+    game_of_life.set_dead(0, 2, test_data)
+    assert test_data[0][2] == 0
