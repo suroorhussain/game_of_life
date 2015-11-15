@@ -8,3 +8,5 @@ def isdead(x, y, grid) :
 #     count = 0
 #     if 
 
+def set_alive(x, y, grid) :
+    grid[x][y] = 1
