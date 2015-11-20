@@ -25,3 +25,23 @@ def set_alive(x, y, grid) :
 
 def set_dead(x, y, grid) :
     grid[x][y] = 0
+
+def next_generation(grid) :
+    grid_bound = len(grid)
+    next_gen = [[0 for x in range(grid_bound)] for y in range(grid_bound)]
+    for x in range(grid_bound) :
+        for y in range(grid_bound) :
+            if count_live_neighbours(x, y, grid) in [2, 3] and not isdead(x, y, grid) :
+                set_alive(x, y, next_gen)
+            elif isdead(x, y, grid) and count_live_neighbours(x, y, grid) == 3 :
+                set_alive(x, y, next_gen)
+    return next_gen
+
+def main() :
+    grid = [[0, 1, 0],
+            [0, 1, 0],
+            [0, 1, 0]]
+    print next_generation(grid)
+
+
+                
