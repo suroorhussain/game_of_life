@@ -40,3 +40,11 @@ def test_set_alive() :
 def test_set_dead() :
     game_of_life.set_dead(0, 2, test_data)
     assert test_data[0][2] == 0
+def test_next_gen() :
+    grid = [[0,0,0],
+            [1,1,1],
+            [0,0,0]]
+    nexgen = game_of_life.next_generation(grid)
+    assert nexgen == [[0,1,0],
+                      [0,1,0],
+                      [0,1,0]]
