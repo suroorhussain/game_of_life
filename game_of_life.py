@@ -43,5 +43,7 @@ def main() :
             [0, 1, 0]]
     print next_generation(grid)
 
+if __name__ == "__main__" :
+    main()
 
                 
