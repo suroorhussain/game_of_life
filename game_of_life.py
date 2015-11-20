@@ -23,9 +23,6 @@ def count_live_neighbours(x, y, grid) :
 def set_alive(x, y, grid) :
     grid[x][y] = 1
 
-def set_dead(x, y, grid) :
-    grid[x][y] = 0
-
 def next_generation(grid) :
     grid_bound = len(grid)
     next_gen = [[0 for x in range(grid_bound)] for y in range(grid_bound)]
