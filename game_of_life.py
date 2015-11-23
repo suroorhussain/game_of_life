@@ -34,14 +34,22 @@ def next_generation(grid):
                 set_alive(x, y, next_gen)
     return next_gen
 
+def print_grid(grid):
+    for i in grid:
+        print i, "\n"
+    print "\n"
+
 def main():
-    grid = [[0, 1, 0],
-            [0, 1, 0],
-            [0, 1, 0]]
+    grid = [[0, 1, 0, 1, 1],
+            [0, 1, 0, 0, 1],
+            [0, 1, 0, 1, 0],
+            [0, 0, 0, 0, 0],
+            [1, 0, 1, 0, 1]]
     new_grid = grid
     while True:
+        print_grid(new_grid)
         new_grid = next_generation(new_grid)
-        print new_grid
+        
 
 if __name__ == "__main__":
     main()
